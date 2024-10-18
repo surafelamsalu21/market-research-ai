@@ -40,15 +40,36 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        console.log('Form submission initiated.');
+
+        // Log form input values
+        const textInputs = form.querySelectorAll('input[type="text"], textarea');
+        textInputs.forEach(input => {
+            console.log(`Input Name: ${input.name}, Value: ${input.value}`);
+        });
+
+        // Log file information if a file is selected
+        const file = fileInput.files[0];
+        if (file) {
+            console.log(`Selected file: ${file.name}, Type: ${file.type}, Size: ${file.size} bytes`);
+        } else {
+            console.log('No file selected.');
+        }
+
         loadingSpinner.style.display = 'block';
         submitButton.disabled = true;
 
         try {
             const formData = new FormData(form);
-            
-            // Removed incorrect header appends to FormData
-            // formData.append('X-Requested-With', 'XMLHttpRequest');
-            // formData.append('Accept', 'application/json');
+
+            // Log FormData entries
+            for (let [key, value] of formData.entries()) {
+                if (value instanceof File) {
+                    console.log(`FormData Entry - ${key}: File - Name: ${value.name}, Type: ${value.type}, Size: ${value.size}`);
+                } else {
+                    console.log(`FormData Entry - ${key}: ${value}`);
+                }
+            }
 
             const response = await fetch('https://market-research-ai-production.up.railway.app/analyze', {
                 method: 'POST',
@@ -60,16 +81,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
+            console.log(`Received response with status: ${response.status}`);
+
+            const responseText = await response.text();
+            console.log(`Response Text: ${responseText}`);
+
             if (!response.ok) {
-                const text = await response.text();
-                throw new Error(`HTTP error! status: ${response.status}. Response: ${text}`);
+                throw new Error(`HTTP error! status: ${response.status}. Response: ${responseText}`);
             }
 
-            const data = await response.json();
+            let data;
+            try {
+                data = JSON.parse(responseText);
+                console.log('Parsed JSON Response:', data);
+            } catch (jsonError) {
+                console.error('Error parsing JSON:', jsonError);
+                throw new Error('Invalid JSON response from server.');
+            }
+
             displayAnalysisResults(data);
         } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred during the analysis. Please try again later.');
+            console.error('Error during form submission:', error);
+            alert('An error occurred during the analysis. Please check the console for more details.');
         } finally {
             loadingSpinner.style.display = 'none';
             submitButton.disabled = false;
@@ -126,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(() => {
                 loadingSpinner.style.display = 'none';
                 newDownloadButton.disabled = false;
+                console.log('PDF generation completed successfully.');
             })
             .catch(error => {
                 console.error('Error generating PDF:', error);
