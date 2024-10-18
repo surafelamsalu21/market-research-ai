@@ -1,50 +1,75 @@
-form.addEventListener('submit', async function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('analysis-form');
+    const fileInput = form.querySelector('input[type="file"]');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const loadingSpinner = document.getElementById('loading-spinner');
 
-    if (!validateForm()) {
-        alert('Please fill in all fields.');
-        return;
+    // Validate file types
+    function validateFileType(file) {
+        const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        return allowedTypes.includes(file.type);
     }
 
-    loadingSpinner.style.display = 'block';
-    submitButton.disabled = true;
-
-    try {
-        const formData = new FormData(form);
-        
-        // Add a custom header to identify the request
-        formData.append('X-Requested-With', 'XMLHttpRequest');
-
-        const response = await fetch('https://market-research-ai-production.up.railway.app/analyze', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Content-Type': 'multipart/form-data',
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
+    // Validate the form inputs
+    function validateForm() {
+        const inputs = form.querySelectorAll('input[type="text"], textarea');
+        for (let input of inputs) {
+            if (input.value.trim() === '') {
+                return false;
             }
-        });
+        }
+        return true;
+    }
 
-        if (!response.ok) {
-            const text = await response.text();
-            throw new Error(`HTTP error! status: ${response.status}. Response: ${text}`);
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file && !validateFileType(file)) {
+            alert('Please upload a PDF or DOCX file only.');
+            fileInput.value = '';
+        }
+    });
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        if (!validateForm()) {
+            alert('Please fill in all fields.');
+            return;
         }
 
-        const data = await response.json();
-        displayAnalysisResults(data);
-    } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred during the analysis. Please try again later.');
-        loadingSpinner.style.display = 'none';
-        submitButton.disabled = false;
-    } finally {
-        loadingSpinner.style.display = 'none';
-        submitButton.disabled = false;
-    }
-});
+        loadingSpinner.style.display = 'block';
+        submitButton.disabled = true;
 
-// ... rest of the code remains the same ...
+        try {
+            const formData = new FormData(form);
+            
+            // Add custom headers
+            formData.append('X-Requested-With', 'XMLHttpRequest');
+            formData.append('Accept', 'application/json');
 
+            const response = await fetch('https://market-research-ai-production.up.railway.app/analyze', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            });
+
+            if (!response.ok) {
+                const text = await response.text();
+                throw new Error(`HTTP error! status: ${response.status}. Response: ${text}`);
+            }
+
+            const data = await response.json();
+            displayAnalysisResults(data);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred during the analysis. Please try again later.');
+        } finally {
+            loadingSpinner.style.display = 'none';
+            submitButton.disabled = false;
+        }
     });
 
     function displayAnalysisResults(analysisData) {
@@ -69,7 +94,6 @@ form.addEventListener('submit', async function(e) {
 
         // Ensure download button has only one event listener
         const downloadButton = document.getElementById('download-btn');
-        // Remove existing event listeners to prevent multiple bindings
         const newDownloadButton = downloadButton.cloneNode(true);
         downloadButton.parentNode.replaceChild(newDownloadButton, downloadButton);
 
