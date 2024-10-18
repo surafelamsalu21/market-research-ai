@@ -1,0 +1,709 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:49:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:49:50] "GET /static/css/style.css HTTP/1.1" 200 -
+ERROR:root:Error in analysis: OpenAI.__init__() got an unexpected keyword argument 'temperature'
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:50:23] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:52:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:52:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:52:32] "[33mPOST /analyze HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:53:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:53:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error in analysis: results.html
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:54:33] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:01:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:01:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+ERROR:root:Error in analysis: string indices must be integers, not 'str'
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:02:16] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:02:32] "[31m[1mGET /analyze HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+ERROR:root:Error in analysis: string indices must be integers, not 'str'
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:03:02] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+ERROR:root:Error in analysis: string indices must be integers, not 'str'
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:04:29] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Music/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-496-122
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error in analysis: Failed to retrieve market data
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:06:20] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error in analysis: Failed to retrieve market data
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:08:28] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error in analysis: Failed to retrieve market data
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:11:29] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:35:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:35:31] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:35:31] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:35:31] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:35:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error in analysis: Failed to retrieve market data
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:36:54] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:44:08] "[31m[1mGET /analyze HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:44:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:44:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:44:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error querying Perplexity AI: 400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions
+ERROR:root:Error in analysis: Failed to retrieve market data
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:45:19] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+ERROR:root:Error in analysis: results.html
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:49:25] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:54:04] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+ERROR:root:Error in analysis: Invalid format specifier ' "...",
+        "sam": "...",
+        "som": "..."
+    ' for object of type 'str'
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 12:58:23] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 13:03:45] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/Users/jakobwredstrom/Desktop/Apps - curser/Surafel demo projects/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-822-378
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:13:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:13:27] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:17:13] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:18:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:18:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:10:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:10:10] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:10:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:13:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:13:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:13:55] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:15:12] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:16:22] "[33mGET /download-report HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:28:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:28:18] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:28:18] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:29:34] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:38:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:38:51] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:38:51] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 19:41:57] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+2024-10-17 19:51:50,209 WARNING: * Debugger is active!
+2024-10-17 19:51:50,234 INFO: * Debugger PIN: 908-172-989
+2024-10-17 19:52:25,085 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+2024-10-17 19:52:41,951 WARNING: * Debugger is active!
+2024-10-17 19:52:41,952 INFO: * Debugger PIN: 908-172-989
+2024-10-17 19:53:06,283 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-17 19:53:06,283 INFO:[33mPress CTRL+C to quit[0m
+2024-10-17 19:53:06,298 INFO: * Restarting with watchdog (inotify)
+2024-10-17 19:53:07,667 WARNING: * Debugger is active!
+2024-10-17 19:53:07,668 INFO: * Debugger PIN: 908-172-989
+2024-10-17 19:56:36,393 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-17 19:56:36,393 INFO:[33mPress CTRL+C to quit[0m
+2024-10-17 19:56:36,401 INFO: * Restarting with watchdog (inotify)
+2024-10-17 19:56:38,532 WARNING: * Debugger is active!
+2024-10-17 19:56:38,533 INFO: * Debugger PIN: 908-172-989
+2024-10-17 19:56:39,154 INFO:127.0.0.1 - - [17/Oct/2024 19:56:39] "GET / HTTP/1.1" 200 -
+2024-10-17 19:56:39,316 INFO:127.0.0.1 - - [17/Oct/2024 19:56:39] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2024-10-17 19:56:39,699 INFO:127.0.0.1 - - [17/Oct/2024 19:56:39] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-10-17 19:58:14,384 ERROR:Error in analysis: 'str' object has no attribute 'get'
+2024-10-17 19:58:14,395 INFO:127.0.0.1 - - [17/Oct/2024 19:58:14] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2024-10-17 20:05:49,324 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-17 20:05:49,324 INFO:[33mPress CTRL+C to quit[0m
+2024-10-17 20:05:49,333 INFO: * Restarting with watchdog (inotify)
+2024-10-17 20:05:50,689 WARNING: * Debugger is active!
+2024-10-17 20:05:50,689 INFO: * Debugger PIN: 908-172-989
+2024-10-17 20:07:06,478 ERROR:Error in analysis: 'str' object has no attribute 'get'
+2024-10-17 20:07:06,492 INFO:127.0.0.1 - - [17/Oct/2024 20:07:06] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2024-10-17 20:09:52,398 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:09:52,400 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:09:52,453 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:09:52,468 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:09:52,498 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:09:53,536 INFO: * Restarting with watchdog (inotify)
+2024-10-17 20:09:56,212 WARNING: * Debugger is active!
+2024-10-17 20:09:56,213 INFO: * Debugger PIN: 908-172-989
+2024-10-17 20:09:59,655 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-17 20:09:59,655 INFO:[33mPress CTRL+C to quit[0m
+2024-10-17 20:09:59,663 INFO: * Restarting with watchdog (inotify)
+2024-10-17 20:10:01,014 WARNING: * Debugger is active!
+2024-10-17 20:10:01,014 INFO: * Debugger PIN: 908-172-989
+2024-10-17 20:10:06,337 INFO:127.0.0.1 - - [17/Oct/2024 20:10:06] "GET / HTTP/1.1" 200 -
+2024-10-17 20:10:06,551 INFO:127.0.0.1 - - [17/Oct/2024 20:10:06] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2024-10-17 20:10:06,573 INFO:127.0.0.1 - - [17/Oct/2024 20:10:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-10-17 20:11:50,401 ERROR:Error in analysis: 'str' object has no attribute 'get'
+2024-10-17 20:11:50,403 INFO:127.0.0.1 - - [17/Oct/2024 20:11:50] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2024-10-17 20:12:25,102 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:12:26,390 INFO: * Restarting with watchdog (inotify)
+2024-10-17 20:12:29,438 WARNING: * Debugger is active!
+2024-10-17 20:12:29,439 INFO: * Debugger PIN: 908-172-989
+2024-10-17 20:12:36,728 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:12:36,729 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:12:36,774 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:12:36,788 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:12:36,795 INFO: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+2024-10-17 20:12:37,248 INFO: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:13:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:13:56] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:13:56] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:15:15] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:16:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:16:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:18:07] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:18:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:18:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:20:02] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:21:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:21:48] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:23:09] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:31:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:31:54] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:33:21] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 20:33:56] "[33mGET /results HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:29:32] "[33mGET /results HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:29:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:29:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:31:03] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:34:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:34:11] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:35:33] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:43:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:43:27] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:44:43] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:46:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:46:33] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:47:57] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+ERROR:root:JSON decode error: Expecting value: line 1 column 1 (char 0)
+ERROR:root:Error in analysis: Failed to analyze market data
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:54:44] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:54:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:54:50] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:56:34] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:59:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 21:59:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:00:28] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:09:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:09:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:11:00] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:11:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:11:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/anaconda3/envs/game_boy/lib/python3.12/site-packages/flask/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/anaconda3/envs/game_boy/lib/python3.12/site-packages/flask_cors/extension.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/anaconda3/envs/game_boy/lib/python3.12/site-packages/flask/templating.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/anaconda3/envs/game_boy/lib/python3.12/site-packages/jinja2/environment.py', reloading
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/anaconda3/envs/game_boy/lib/python3.12/site-packages/jinja2/loaders.py', reloading
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:13:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:13:45] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:13:45] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:13:48] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=FguUvR9C58lkzdKFe6l7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:13:48] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:14:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:14:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:16:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:16:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:18:16] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:24:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:24:01] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:28:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:28:00] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:30:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:30:24] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:32:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:32:10] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:33:17] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:40:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:40:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:42:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:42:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:43:21] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/surafelamsalu21/Pictures/market-research-ai-jakob-bugfix/market-research-ai/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 908-172-989
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (inotify)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 452-663-272
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2024 12:45:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2024 12:45:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2024 12:45:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Oct/2024 12:46:40] "POST /analyze HTTP/1.1" 200 -

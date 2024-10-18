@@ -1,0 +1,121 @@
+    <!-- market-research-ai/templates/index.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Market Research AI</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .spinner {
+                animation: spin 2s linear infinite;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div class="container mx-auto p-8 bg-white rounded-lg shadow-lg max-w-2xl">
+            <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Market Research AI</h1>
+            
+            <form id="analysis-form" class="space-y-4">
+                <input type="text" name="product_service" placeholder="Product/Service" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" name="target_geography" placeholder="Target Geography" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" name="audience_persona" placeholder="Audience Persona" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" name="industry" placeholder="Industry" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <div class="flex items-center justify-center w-full">
+                    <label for="file-upload" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                            </svg>
+                            <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500">PDF or DOCX (MAX. 10MB)</p>
+                        </div>
+                        <input id="file-upload" name="file" type="file" class="hidden" required />
+                    </label>
+                </div>
+                <p id="file-name" class="text-sm text-gray-600 mt-2"></p>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300">Analyze</button>
+            </form>
+    
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" class="hidden fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-700 opacity-75 flex flex-col items-center justify-center">
+                <div class="spinner ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+                <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
+                <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
+            </div>
+    
+            <!-- Report Section -->
+            <div id="report-section" class="hidden mt-8 p-6 bg-gray-50 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Market Analysis Report</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700">TAM Analysis:</h3>
+                        <p id="tam" class="text-gray-600"></p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700">SAM Analysis:</h3>
+                        <p id="sam" class="text-gray-600"></p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700">SOM Analysis:</h3>
+                        <p id="som" class="text-gray-600"></p>
+                    </div>
+                </div>
+                <button id="download-btn" class="mt-6 w-full bg-green-500 text-white p-2 rounded-md hover:bg-green-600 transition duration-300">Download PDF</button>
+            </div>
+        </div>
+    
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script>
+            document.getElementById('file-upload').addEventListener('change', function(e) {
+                var fileName = e.target.files[0].name;
+                document.getElementById('file-name').textContent = 'Selected file: ' + fileName;
+            });
+
+            document.getElementById('download-btn').addEventListener('click', function() {
+                // Show loading spinner
+                document.getElementById('loading-spinner').classList.remove('hidden');
+                
+                fetch('/download-results-pdf', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        tam: document.getElementById('tam').innerText,
+                        sam: document.getElementById('sam').innerText,
+                        som: document.getElementById('som').innerText
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to download PDF');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Market_Analysis_Report.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while downloading the PDF.');
+                })
+                .finally(() => {
+                    // Hide loading spinner
+                    document.getElementById('loading-spinner').classList.add('hidden');
+                });
+            });
+        </script>
+    </body>
+    </html>
