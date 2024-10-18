@@ -1,4 +1,5 @@
-# market-research-ai/app.py
+```python
+import openai  # Correct import
 from fpdf import FPDF
 import matplotlib.pyplot as plt
 import os
@@ -6,18 +7,22 @@ from flask import Flask, render_template, request, jsonify, send_file
 from flask_cors import CORS  # Added for CORS support
 import io
 from retrying import retry
-from openai import OpenAI
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 import logging
 import requests
 import json
+import traceback
 
 # Load environment variables
 load_dotenv()
 
 # Configure logging
-logging.basicConfig(filename='app.log', level=logging.ERROR)
+logging.basicConfig(
+    filename='app.log',
+    level=logging.DEBUG,  # Set to DEBUG for detailed logs
+    format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s'
+)
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -29,30 +34,11 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 # Configure API keys
-openai_api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv('OPENAI_API_KEY')  # Set API key on openai module
 perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
 
-# Initialize OpenAI client
-client = OpenAI(api_key=openai_api_key)
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-@app.route('/upload', methods=['POST'])
-def upload_file():
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
-    file = request.files['file']
-    if file.filename == '':
-        return jsonify({'error': 'No selected file'}), 400
-    if file:
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        print(f"File uploaded: {filename}")  # Debug print
-        return jsonify({'message': 'File uploaded successfully'}), 200
-
-PERPLEXITY_API_URL = "https://api.perplexity.ai/chat/completions"
+# Update Perplexity AI API URL based on actual documentation
+PERPLEXITY_API_URL = "https://api.perplexity.ai/v1/chat/completions"
 
 @retry(stop_max_attempt_number=3, wait_fixed=2000)
 def query_perplexity_ai(prompt):
@@ -61,7 +47,7 @@ def query_perplexity_ai(prompt):
         "Content-Type": "application/json"
     }
     data = {
-        "model": "llama-3.1-sonar-small-128k-online",  # Updated to a supported model
+        "model": "llama-3.1-sonar-small-128k-online",  # Ensure this model is correct as per API documentation
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": 1000,  # Optional: specify as needed
         "temperature": 0.7  # Optional: adjust for response randomness
@@ -69,14 +55,14 @@ def query_perplexity_ai(prompt):
     try:
         response = requests.post(PERPLEXITY_API_URL, json=data, headers=headers)
         response.raise_for_status()
-        print(f"Perplexity AI response: {response.status_code}")  # Debug print
+        logging.debug(f"Perplexity AI response status: {response.status_code}")
         return response.json()['choices'][0]['message']['content']
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")  # HTTP error
-        print(f"Response content: {response.text}")  # Log response content
+        logging.error(f"HTTP error occurred: {http_err}")
+        logging.error(f"Response content: {response.text}")
         raise
     except requests.exceptions.RequestException as e:
-        print(f"Error querying Perplexity AI: {str(e)}")  # Other errors
+        logging.error(f"Error querying Perplexity AI: {str(e)}")
         raise
 
 def generate_market_analysis_questions(product_service, target_geography, audience, industry):
@@ -91,18 +77,26 @@ def generate_market_analysis_questions(product_service, target_geography, audien
     """
     
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are a market research expert generating questions for TAM, SAM, and SOM analysis."},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            temperature=0.7,  # Optional: adjust as needed
+            max_tokens=1000     # Optional: adjust as needed
         )
-        print("Market analysis questions generated successfully")  # Debug print
-        return response.choices[0].message.content
+        logging.debug("Market analysis questions generated successfully.")
+        content = response.choices[0].message['content']
+        
+        # Ensure the content is valid JSON
+        if content.strip().startswith('{') and content.strip().endswith('}'):
+            return content
+        else:
+            logging.error(f"Unexpected format for questions: {content}")
+            return None
     except Exception as e:
-        logging.error(f"Error in OpenAI API call: {str(e)}")
-        print(f"Error generating market analysis questions: {str(e)}")  # Debug print
+        logging.error(f"Error in OpenAI API call: {str(e)}", exc_info=True)
         return None
 
 def get_market_data(questions, product_service, target_geography, industry):
@@ -117,10 +111,9 @@ def get_market_data(questions, product_service, target_geography, industry):
         try:
             response = query_perplexity_ai(prompt)
             market_data.append(response)
-            print(f"Market data {i+1} retrieved successfully")  # Debug print
+            logging.debug(f"Market data {i+1} retrieved successfully.")
         except Exception as e:
-            logging.error(f"Error querying Perplexity AI: {str(e)}")
-            print(f"Error retrieving market data {i+1}: {str(e)}")  # Debug print
+            logging.error(f"Error retrieving market data {i+1}: {str(e)}", exc_info=True)
             market_data.append(None)
 
     return market_data
@@ -156,7 +149,7 @@ def analyze_market_data(market_data, product_service, target_geography, industry
     """
 
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
                 {
@@ -167,63 +160,103 @@ def analyze_market_data(market_data, product_service, target_geography, industry
                     "role": "user",
                     "content": analysis_prompt
                 }
-            ]
+            ],
+            temperature=0.7,  # Optional: adjust as needed
+            max_tokens=1500     # Optional: adjust as needed
         )
-        print("Market data analysis completed successfully")  # Debug print
-
-        analysis_json = response.choices[0].message.content
-        print("Analysis JSON:", analysis_json)  # Debug print
-
-        # Parse the JSON string into a Python dictionary
-        analysis_data = json.loads(analysis_json)
-        return analysis_data
+        logging.debug("Market data analysis completed successfully.")
+        
+        analysis_json = response.choices[0].message['content']
+        logging.debug(f"Analysis JSON: {analysis_json}")
+        
+        # Ensure the content is valid JSON
+        if analysis_json.strip().startswith('{') and analysis_json.strip().endswith('}'):
+            analysis_data = json.loads(analysis_json)
+            return analysis_data
+        else:
+            logging.error(f"Unexpected format for analysis data: {analysis_json}")
+            return None
     except json.JSONDecodeError as json_err:
-        logging.error(f"JSON decode error: {str(json_err)}")
-        print(f"Error decoding JSON: {str(json_err)}")  # Debug print
+        logging.error(f"JSON decode error: {str(json_err)}", exc_info=True)
         return None
     except Exception as e:
-        logging.error(f"Error in OpenAI API call: {str(e)}")
-        print(f"Error analyzing market data: {str(e)}")  # Debug print
+        logging.error(f"Error in OpenAI API call: {str(e)}", exc_info=True)
         return None
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        logging.error("No file part in the request.")
+        return jsonify({'error': 'No file part'}), 400
+    file = request.files['file']
+    if file.filename == '':
+        logging.error("No selected file.")
+        return jsonify({'error': 'No selected file'}), 400
+    if file:
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+        logging.debug(f"File uploaded: {filename}")
+        return jsonify({'message': 'File uploaded successfully'}), 200
 
 @app.route('/analyze', methods=['POST'])
 def analyze_market():
     try:
         # Retrieve form data
-        country = request.form.get('country')
         target_geography = request.form.get('target_geography')
         audience_persona = request.form.get('audience_persona')
         product_service = request.form.get('product_service')
         industry = request.form.get('industry')
 
-        print(f"Analyzing market for {product_service} in {target_geography}")  # Debug print
+        logging.debug(f"Analyzing market for {product_service} in {target_geography}")
+
+        # Handle file upload if necessary
+        if 'file' not in request.files:
+            raise Exception("No file part in the request")
+        file = request.files['file']
+        if file.filename == '':
+            raise Exception("No selected file")
+        if file:
+            filename = secure_filename(file.filename)
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
+            logging.debug(f"File uploaded: {filename}")
+            # You can process the file as needed here
 
         # Generate questions
         questions = generate_market_analysis_questions(product_service, target_geography, audience_persona, industry)
         if not questions:
             raise Exception("Failed to generate market analysis questions")
 
-        questions = json.loads(questions)
+        # Parse generated questions JSON
+        try:
+            questions_data = json.loads(questions)
+        except json.JSONDecodeError as e:
+            logging.error(f"Error parsing questions JSON: {str(e)}")
+            raise Exception("Invalid questions format received from OpenAI")
 
         # Get market data
-        market_data = get_market_data(questions, product_service, target_geography, industry)
+        market_data = get_market_data(questions_data, product_service, target_geography, industry)
         if not all(market_data):
-            raise Exception("Failed to retrieve market data")
+            raise Exception("Failed to retrieve all market data")
 
         # Analyze market data
         analysis_result = analyze_market_data(market_data, product_service, target_geography, industry)
         if not analysis_result:
             raise Exception("Failed to analyze market data")
 
-        print("Market analysis completed successfully")  # Debug print
+        logging.debug("Market analysis completed successfully.")
 
         return jsonify(analysis_result), 200  # Return as JSON response
-    except Exception as e:
-        logging.error(f"Error in analysis: {str(e)}")
-        print(f"Error in market analysis: {str(e)}")  # Debug print
-        return jsonify({'error': str(e)}), 500
 
-# Function to generate PDF report with market analysis and graphs
+    except Exception as e:
+        logging.error("An error occurred during market analysis", exc_info=True)
+        return jsonify({'error': 'An internal error occurred. Please try again later.'}), 500
+
 def generate_pdf_report(analysis_data, product_service, target_geography, industry):
     # Create a PDF object
     pdf = FPDF()
@@ -286,13 +319,13 @@ def generate_pdf_report(analysis_data, product_service, target_geography, indust
 
     return pdf_output
 
-# New route to download the PDF report
 @app.route('/download_pdf', methods=['POST'])
 def download_pdf():
     try:
         data = request.get_json()
 
         if not data:
+            logging.error("No data provided in PDF download request.")
             return jsonify({"error": "No data provided"}), 400
 
         analysis_data = data.get('analysis_data')
@@ -301,6 +334,7 @@ def download_pdf():
         industry = data.get('industry')
 
         if not all([analysis_data, product_service, target_geography, industry]):
+            logging.error("Missing required fields in PDF download request.")
             return jsonify({"error": "Missing required fields"}), 400
 
         # Generate the PDF report
@@ -314,8 +348,7 @@ def download_pdf():
             mimetype='application/pdf'
         )
     except Exception as e:
-        logging.error(f"Error generating PDF report: {str(e)}")
-        print(f"Error generating PDF report: {str(e)}")  # Debug print
+        logging.error(f"Error generating PDF report: {str(e)}", exc_info=True)
         return jsonify({"error": "Failed to generate PDF report"}), 500
 
 if __name__ == '__main__':
