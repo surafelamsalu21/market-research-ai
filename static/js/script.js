@@ -43,7 +43,7 @@
     
             const formData = new FormData(form);
     
-            fetch('/analyze', {
+            fetch('https://market-research-ai-production.up.railway.app/analyze', {
                 method: 'POST',
                 body: formData
             })
