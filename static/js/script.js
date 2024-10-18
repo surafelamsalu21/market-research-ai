@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Validate file types
     function validateFileType(file) {
-        const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        const allowedTypes = [
+            'application/pdf',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        ];
         return allowedTypes.includes(file.type);
     }
 
@@ -43,16 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const formData = new FormData(form);
             
-            // Add custom headers
-            formData.append('X-Requested-With', 'XMLHttpRequest');
-            formData.append('Accept', 'application/json');
+            // Removed incorrect header appends to FormData
+            // formData.append('X-Requested-With', 'XMLHttpRequest');
+            // formData.append('Accept', 'application/json');
 
             const response = await fetch('https://market-research-ai-production.up.railway.app/analyze', {
                 method: 'POST',
                 body: formData,
                 headers: {
-                    'Content-Type': 'multipart/form-data',
-                    'X-Requested-With': 'XMLHttpRequest'
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                    // 'Content-Type' is intentionally omitted to let the browser set it, including the boundary
                 }
             });
 
