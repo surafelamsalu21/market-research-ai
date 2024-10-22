@@ -43,7 +43,7 @@
     
             const formData = new FormData(form);
     
-            fetch('/analyze', {
+            fetch('https://yappy-vivienne-surafelamsalu-d8298ba0.koyeb.app/analyze', {
                 method: 'POST',
                 body: formData
             })
