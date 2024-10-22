@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, jsonify, send_file
 from flask_cors import CORS  # Added for CORS support
 import io
 from retrying import retry
-from openai import OpenAI
+import openai
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 import logging
@@ -33,7 +33,15 @@ openai_api_key = os.getenv('OPENAI_API_KEY')
 perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
 
 # Initialize OpenAI client
-client = OpenAI(api_key=openai_api_key)
+openai.api_key = openai_api_key
+
+if not openai_api_key:
+    logging.error("OPENAI_API_KEY is not set.")
+    raise EnvironmentError("OPENAI_API_KEY is not set.")
+
+if not perplexity_api_key:
+    logging.error("PERPLEXITY_API_KEY is not set.")
+    raise EnvironmentError("PERPLEXITY_API_KEY is not set.")
 
 @app.route('/')
 def home():
@@ -91,7 +99,7 @@ def generate_market_analysis_questions(product_service, target_geography, audien
     """
     
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are a market research expert generating questions for TAM, SAM, and SOM analysis."},
@@ -156,7 +164,7 @@ def analyze_market_data(market_data, product_service, target_geography, industry
     """
 
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
                 {
