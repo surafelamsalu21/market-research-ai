@@ -60,7 +60,11 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred: ' + error.message);
+                if (error.message.includes('OpenAI')) {
+                    alert('An error occurred while communicating with the AI service. Please try again later.');
+                } else {
+                    alert('An unexpected error occurred. Please check your inputs and try again.');
+                }
                 loadingSpinner.style.display = 'none';
                 submitButton.disabled = false;
             });
