@@ -34,8 +34,8 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 # Configure API keys
-openai.api_key = os.getenv('OPENAI_API_KEY')  # Set API key on openai module
-perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
+openai.api_key =  os.environ.get('OPENAI_API_KEY')  # Set API key on openai module
+perplexity_api_key =  os.environ.get('PERPLEXITY_API_KEY')
 
 # Update Perplexity AI API URL based on actual documentation
 PERPLEXITY_API_URL = "https://api.perplexity.ai/v1/chat/completions"
