@@ -194,7 +194,7 @@ def analyze_market_data(market_data, product_service, target_geography, industry
         print(f"Error analyzing market data: {str(e)}")  # Debug print
         return None
 
-@app.route('/analyze', methods=['POST'])
+@app.route('https://yappy-vivienne-surafelamsalu-d8298ba0.koyeb.app/analyze', methods=['POST'])
 def analyze_market():
     try:
         # Retrieve form data
